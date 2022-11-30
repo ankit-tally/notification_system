@@ -11,6 +11,7 @@ const firebaseConfig = {
   measurementId: "G-3X2X9NX4DX"
 };
 
+let token = "";
 function requestPermission() {
   console.log("Requesting permission...");
   Notification.requestPermission().then((permission) => {
@@ -23,6 +24,7 @@ function requestPermission() {
         vapidKey: "BGeR7IRja8F3wBRMi_aeSkQqRqLSdDViNetnmvPqKFYEYUvHC3KaTn-Y-Iq_Q9bgtcq2s-MdY9J2ZvsU76jivW8",
       }).then((currentToken) => {
         if (currentToken) {
+          token = currentToken;
           console.log("currentToken: ", currentToken);
         } else {
           console.log("Can not get token");
@@ -34,4 +36,5 @@ function requestPermission() {
   });
 }
 
+export {token};
 requestPermission();
