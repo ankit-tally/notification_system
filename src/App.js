@@ -1,4 +1,5 @@
-import './messaging';
+import './main';
+
 import {token} from './messaging';
 
 function App() {
