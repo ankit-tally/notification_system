@@ -72,9 +72,6 @@ export default function App() {
       <button className="btn-primary" onClick={unsubscribeButton}>
         Unsubscribe
       </button>
-      <button className="btn-primary" onClick={allids}>
-        getallids
-      </button>
 
 
 
