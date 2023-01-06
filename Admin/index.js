@@ -6,6 +6,8 @@ const path = require('path');
 
 const app = express();
 
+// Add Service account key .json file in the public file
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 admin.initializeApp({
